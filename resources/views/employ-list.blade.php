@@ -9,9 +9,9 @@
         <button><a href="{{url('insert')}}">Add Employ</a></button> 
     </form>
 
+    {{-- // Delete multiple --}}
     <form action="delete-multiple" method="post">
         @csrf
-        {{-- <input type="hidden" name="_method" value="delete"> --}}
         <button type="submit" name="action" value="delete">Delete</button>
         <br>
         <br>
