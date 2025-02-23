@@ -15,9 +15,10 @@ Route::get('/', function () {
 
 Route::view('insert','dtainsert');
 Route::post('insert',[EmployController::class,'insert']);
-Route::get('list',[EmployController::class,'list']);
+Route::get('list', [EmployController::class,'list']);
 Route::get('delete/{id}',[EmployController::class,'delete']);
 Route::get('edit/{id}',[EmployController::class,'showData']);
 Route::put('edit-employ/{id}',[EmployController::class,'update']);
 Route::get('search',[EmployController::class,'search']);
+Route::post('delete-multiple',[EmployController::class,'deleteMultiple']);
 

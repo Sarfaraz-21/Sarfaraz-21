@@ -15,13 +15,13 @@ class EmployController extends Controller
         $employ->email = $req->email;
         $employ->phone = $req->phone;
         $employ->save();
-        // return redirect('insert');
+        return redirect('list');
 
-        if($req ) {
-            return "Data Inserted Successfully";
-        } else {
-            return "Data Insertion Failed";
-        }
+        // if($req ) {
+        //     return "Data Inserted Successfully";
+        // } else {
+        //     return "Data Insertion Failed";
+        // }
     }
 
     // function list()
@@ -74,4 +74,10 @@ class EmployController extends Controller
     return view('Employ-list', ['employs' => $data, 'search' => $req->search]);
 }
 
+    function deleteMultiple(Request $req)
+    {
+        $ids = $req->ids;
+        employ::destroy($ids);
+        return redirect('list');
+    }
 }
