@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Upload;
+use App\Http\Controllers\ImageController ;
 use App\Http\Controllers\EmployController;
 
 Route::get('/', function () {
@@ -21,4 +21,9 @@ Route::get('edit/{id}',[EmployController::class,'showData']);
 Route::put('edit-employ/{id}',[EmployController::class,'update']);
 Route::get('search',[EmployController::class,'search']);
 Route::post('delete-multiple',[EmployController::class,'deleteMultiple']);
+Route::view('upload-image','upload-image');
+Route::post('upload-image',[ImageController ::class,'uploadImage']);
+Route::get('list-image',[ImageController ::class,'listImage']);
+
+
 

@@ -80,4 +80,5 @@ class EmployController extends Controller
         employ::destroy($ids);
         return redirect('list');
     }
+    
 }
